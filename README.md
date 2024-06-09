@@ -1,3 +1,3 @@
 # Project-Calculator
 
-This is final project of TOP foundation
+This is the final project of TOP foundation
