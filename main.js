@@ -1,16 +1,16 @@
 let firstNumber, operator, secondNumber;
 
-firstNumber = Number(prompt('First number: '));
+// firstNumber = Number(prompt('First number: '));
 
-operator = prompt('Operator: ');
+// operator = prompt('Operator: ');
 
-secondNumber = Number(prompt('Second number: '));
+// secondNumber = Number(prompt('Second number: '));
 
 
 
 const addFunction = function (...args) {
     const wrongNumber = args.some(arg => isNaN(arg));
-    console.log(wrongNumber ? "Wrong data type!" : args.reduce((total, current) => total + current));
+    return wrongNumber ? "Wrong data type!" : args.reduce((total, current) => total + current);
 };
 
 const substractFunction = function (...args) {
@@ -42,4 +42,5 @@ const operate = function (operator) {
             return divideFunction(firstNumber, secondNumber);
     };
 };
+
 
