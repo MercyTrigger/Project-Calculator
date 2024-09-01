@@ -1,17 +1,3 @@
-// Keyboard support buttons 
-
-// 0-9       	0-9
-// Shift + 2 	Delete all
-// Backspace 	Backspace
-// Shift + 5	  %
-// =	          +
-// -	          -
-// Shift + 8	  *
-// Shift + \	  /
-// Enter	      =
-// Shift + >   .
-
-
 // music section -------------------------------------------------------------------------------
 const imgAudion = document.querySelector('#guitar');
 
@@ -30,9 +16,6 @@ imgAudion.addEventListener('click', () => {
         musicMuchacho.pause();
     };
 });
-
-
-
 // Setting music on Space key and handeling Alt key music stoppage (it won't stop after pressing Alt now)
 
 let isAltPressed = false; // 
@@ -258,7 +241,6 @@ currentValue.addEventListener('mouseout', e => {
 
 const divCustom = document.createElement('div');
 divCustom.style.cssText = 'height: 60px; width: 60px; border-radius: 50%; background: #eeeee4; opacity: .9; position: fixed; display: none; pointer-events: none; z-index: 9999;'; // fixed prevents from scrolling
-document.body.appendChild(divCustom);
 
 document.addEventListener('mousemove', (event) => {
     divCustom.style.display = 'initial';
@@ -272,6 +254,12 @@ document.addEventListener('mouseleave', () => {
     divCustom.style.display = 'none';
 });
 
+if (screen.width > 500) {
+    document.body.appendChild(divCustom); // adding for tabletes and laptops
+    console.log('Am i working')
+} else {
+     // for phones we removing custom cursor
+}
 
 // cursor sound affect and animation when clicking
 
