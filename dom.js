@@ -248,13 +248,6 @@ currentValue.addEventListener('mouseout', e => {
     container.style.opacity = '1';
 });
 
-
-if (screen.width > 500) {
-    document.body.appendChild(divCustom); // adding for tabletes and laptops
-} else {
-     // for phones we removing custom cursor
-}
-
 // custom cursor section --------------------------------------------------------------------------
 
 const divCustom = document.createElement('div');
@@ -273,6 +266,11 @@ document.addEventListener('mouseleave', () => {
 });
 
 
+if (screen.width > 500) {
+    document.body.appendChild(divCustom); // adding for tabletes and laptops
+} else {
+     // for phones we removing custom cursor
+}
 
 // cursor sound affect and animation when clicking
 
