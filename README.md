@@ -3,7 +3,7 @@
 This is the final project of TOP foundation (open READMI fully to see
 
 Keyboard support buttons 
-Key button	Action
+
 0-9       	0-9
 Shift + 2 	Delete all
 Backspace 	Backspace
@@ -14,3 +14,4 @@ Shift + 8	  *
 Shift + \	  /
 Enter	      =
 Shift + >   .
+
