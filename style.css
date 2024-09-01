@@ -162,12 +162,13 @@ footer a {
     .parent {
         width: 300px;
     }
-    body {
+    html {
+        height: 800px;
+    
       overflow-x: hidden;
-    }
+    } 
     footer {
-        height: 150px;
-        text-align: center;
+        display: none;
     }
   }
 
