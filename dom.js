@@ -61,7 +61,7 @@ addEventListener('keydown', (e) => {
         secondNumber = undefined; // this way we can use same numbers over and over again without interfering the result with multiple operations 
         spanResult.innerText = '';
     };
-    
+
     let symbols = /['-=|*%']/;
 
     const multyOperatorTyping = function() {
@@ -170,18 +170,14 @@ addEventListener('keydown', (e) => {
             break;
         case '%':
             clickMusic.play();
-            if (e.type === '%') {
-                if (firstNumber) { // if there is firstNumber declared
-                    spanResult.innerText = firstNumber; // is case we switching from +-*/ to %
-                    let plainAnswer = parseFloat(spanResult.innerText) / 100;
-                spanResult.innerText =  plainAnswer
-                } else { // else just removing % sign so that NaN wouldn't be thrown
-                    spanResult.innerText = spanResult.innerText.slice(0, -1);
-                };
-            };
             if (spanResult.innerText === '') {
-                // if spanResult.innerText is empty we catching NaN and doing nothing
-            } else { 
+                if (firstNumber) {
+                    spanResult.innerText = firstNumber; // is case we switching from +-*/ to %
+                    spanResult.innerText =  parseFloat(spanResult.innerText) / 100;
+                } else {
+                    // in case it's empty
+                };
+            } else { // regular working scenario when there is spanResult.innerText
                 blinkSpan.style.display = 'none';
                 dotStop.style.opacity = 'initial';
                 spanResult.style.fontSize = '33px'; // to prevent overriding the screen
@@ -204,18 +200,23 @@ addEventListener('keydown', (e) => {
         case 'Enter':
             clickMusic.play();            
                 if (e.key === 'Enter' && secondNumber) {
-                    secondNumber = parseFloat(spanResult.innerText);
-                    result = spanResult.innerText = operateType(operator);
-                } else {
-                    if (e.key === 'Enter' && !firstNumber) {
+                    if (e.key === 'Enter' && !spanResult.innerText) { // in case there is firstNumber but instead of regular +-/* goes Enter
                         alert('Please, assign the right math symbol, not "="');
-                        return ''; // in case if after +-/* user decides to press = (we catching that bug)
                     } else {
                         dotStop.style.opacity = 'initial';
                         blinkSpan.style.display = 'none'; // stopping blinking cursor
                         secondNumber = parseFloat(spanResult.innerText);
                         result = spanResult.innerText = operateType(operator);
-                    };                   
+                    };
+                } else {                    
+                    if (e.key === 'Enter' && !spanResult.innerText) { // in case there is firstNumber but instead of regular +-/* goes Enter
+                        alert('Please, assign the right math symbol, not "="');
+                    } else {
+                        dotStop.style.opacity = 'initial';
+                        blinkSpan.style.display = 'none'; // stopping blinking cursor
+                        secondNumber = parseFloat(spanResult.innerText);
+                        result = spanResult.innerText = operateType(operator);
+                    };
                 } // magic here, as we have 2 variables to store values and it operates
             moreThanOneOperator = 0;      
     };
