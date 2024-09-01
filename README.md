@@ -1,17 +1,7 @@
 # Project-Calculator
 
-This is the final project of TOP foundation (open READMI fully to see
+This is the final project of TOP foundation, took me quite a time to finish (way too long time to be honest)
+There is also key board support
+Keyboard support buttons are placed inside DOM js file on top of it as a comment
 
-Keyboard support buttons 
-
-0-9       	0-9
-Shift + 2 	Delete all
-Backspace 	Backspace
-Shift + 5	  %
-=	          +
--	          -
-Shift + 8	  *
-Shift + \	  /
-Enter	      =
-Shift + >   .
 
