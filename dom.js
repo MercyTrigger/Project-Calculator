@@ -1,16 +1,3 @@
-// Keyboard support buttons 
-
-// 0-9       	0-9
-// Shift + 2 	Delete all
-// Backspace 	Backspace
-// Shift + 5	  %
-// =	          +
-// -	          -
-// Shift + 8	  *
-// Shift + \	  /
-// Enter	      =
-// Shift + >   .
-
 // music section -------------------------------------------------------------------------------
 const imgAudion = document.querySelector('#guitar');
 
