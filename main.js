@@ -228,10 +228,3 @@ currentValue.addEventListener('click', (e) => {
     };
 }); 
 
-
-
-
-
-
-
-

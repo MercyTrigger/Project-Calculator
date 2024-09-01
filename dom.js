@@ -1,3 +1,14 @@
+// Keyboard support buttons 
+// 0-9	0-9
+// Shift + 2	Delete all
+// Backspace	Backspace
+// Shift + 5	%
+// =	+
+// -	-
+// Shift + 5	%
+// Shift + 8	*
+// Shift + \	/
+// Enter	=
 // music section -------------------------------------------------------------------------------
 const imgAudion = document.querySelector('#guitar');
 
@@ -237,6 +248,13 @@ currentValue.addEventListener('mouseout', e => {
     container.style.opacity = '1';
 });
 
+
+if (screen.width > 500) {
+    document.body.appendChild(divCustom); // adding for tabletes and laptops
+} else {
+     // for phones we removing custom cursor
+}
+
 // custom cursor section --------------------------------------------------------------------------
 
 const divCustom = document.createElement('div');
@@ -254,12 +272,7 @@ document.addEventListener('mouseleave', () => {
     divCustom.style.display = 'none';
 });
 
-if (screen.width > 500) {
-    document.body.appendChild(divCustom); // adding for tabletes and laptops
-    console.log('Am i working')
-} else {
-     // for phones we removing custom cursor
-}
+
 
 // cursor sound affect and animation when clicking
 
@@ -294,14 +307,3 @@ let interval = setInterval(() => {
         value = true;
     };    
 }, 450);
-
-
-
-
-
-
-
-
-
-
-
