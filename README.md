@@ -2,7 +2,7 @@
 
 This is the final project of TOP foundation
 
-Keyboard support buttons (I didn't make html/css for it, so I just post it here)
+Keyboard support buttons 
 Key button	Action
 0-9	0-9
 Shift + 2	Delete all
@@ -13,4 +13,5 @@ Shift + 5	%
 Shift + 5	%
 Shift + 8	*
 Shift + \	/
-Enter	=
+Enter	        =
+Shift + >       .
