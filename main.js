@@ -68,8 +68,7 @@ moreThanOneOperator = 0;
 
 currentValue.addEventListener('click', (e) => {   
     
-    blinkSpan.style.display = 'initial'; // stopping blinking cursor 
-    
+    blinkSpan.style.display = 'initial'; // blinking cursor  
 
     if (spanResult.innerText === String(firstNumber) && secondNumber) { // if the same numbers (first and second) arranging second from undefined
         secondNumber = undefined; // this way we can use same numbers over and over again without interfering the result with multiple operations 

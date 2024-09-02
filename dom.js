@@ -63,7 +63,7 @@ addEventListener('keydown', (e) => {
     if (e.key === '_' && !spanResult.innerText.includes('-') && spanResult.innerText) {
         clickMusic.play();
         spanResult.innerText = spanResult.innerText.padStart(spanResult.innerText.length + 1, '-');
-    };    
+    }
 
     if (spanResult.innerText === String(firstNumber) && secondNumber) { // if the same numbers (first and second) arranging second from undefined
         secondNumber = undefined; // this way we can use same numbers over and over again without interfering the result with multiple operations 
